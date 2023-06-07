@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ReadingDiaryApi.Clients.Client">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAEAAABCAIABAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Clients.DBClient" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAQAACAgAAAAAAQAAAAAAAAAAQAAAACAiAAAAIA=</HashCode>
+      <FileName>Clients\DBClient.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IDisposable" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="ReadingDiaryApi.Constants.Constant">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAgAgAgAEAACAAgAAAAAAAAAA=</HashCode>
+      <FileName>Constants\Constant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Controllers.BooksController">
+    <Position X="11" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAgBQAAAAgCEAAAACAAAAAAAAAAQAAAAAACAAAAAA=</HashCode>
+      <FileName>Controllers\BooksController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Extension.Extension">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extension\Extension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Models.Book">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAQGAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Models.volumeInfo">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAQIAAAAwAIgAAAAjQAAAAAAQAQAAAAAAAAAA=</HashCode>
+      <FileName>Models\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Models.saleInfo">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACBAAAAAAAAAA=</HashCode>
+      <FileName>Models\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Models.accessInfo">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAIAAAAAAAAAACAAACAAAAAAA=</HashCode>
+      <FileName>Models\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Models.BookDB">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQwAEAAgAIAAAgAAAAAAAAAAAAAQAAAAAQ=</HashCode>
+      <FileName>Models\BookDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Models.Books">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Books.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Models.YouTube">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\YouTube.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Models.YouTubeVideoItem">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="System.Object" FixedFromPoint="true">
+      <Path>
+        <Point X="13.75" Y="0.5" />
+        <Point X="13.75" Y="0.372" />
+        <Point X="3.873" Y="0.372" />
+        <Point X="3.873" Y="3.545" />
+        <Point X="4.75" Y="3.545" />
+        <Point X="4.75" Y="3.353" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\YouTube.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadingDiaryApi.Models.YouTubeVideoId">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\YouTube.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.AspNetCore.Mvc.Controller">
+    <Position X="14.75" Y="1.25" Width="2.25" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="ReadingDiaryApi.Clients.IDBClient">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAgAAAIAAQAAAAAAAAAAQAAAAAACAAAAIA=</HashCode>
+      <FileName>Clients\IDBClient.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DBClient" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="System.IDisposable">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

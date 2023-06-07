@@ -1,0 +1,313 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "ReadingDiaryAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/GetBook": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "bookIndex",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/GetAuthorBook": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "author",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "bookIndex",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/SearchAudioBookOnYouTube": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "bookTitle",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/PostDynamoDb": {
+      "post": {
+        "tags": [
+          "Books"
+        ],
+        "operationId": "PostDynamoDb",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/BookDB"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/DeleteBookDB": {
+      "delete": {
+        "tags": [
+          "Books"
+        ],
+        "operationId": "DeleteBookDB",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "UserID",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Title",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/GetBookDB": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "operationId": "GetBookDB",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "UserID",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Title",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/BookDB"
+            }
+          }
+        }
+      }
+    },
+    "/UpdateDescription": {
+      "put": {
+        "tags": [
+          "Books"
+        ],
+        "operationId": "UpdateDescription",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "UserID",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Title",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Description",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/UpdateTag": {
+      "put": {
+        "tags": [
+          "Books"
+        ],
+        "operationId": "UpdateTag",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "UserID",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Title",
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/GetAllDynamoDb": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "operationId": "GetAllDB",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "UserId",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BookDB"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "BookDB": {
+      "type": "object",
+      "properties": {
+        "userID": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "author": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "page": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "genre": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string"
+        },
+        "personalDescription": {
+          "type": "string"
+        },
+        "personalTag": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
